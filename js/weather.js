@@ -1,23 +1,18 @@
-const API_KEY = "241051bf139714245234"; //onweathermap.org에서 my api key
-
+const API_KEY = "6ada3d154359d7723352e6d5f9eae577"; //onweathermap.org에서 my api key
+const weather = document.querySelector("#weather span:first-child");
+const city=document.querySelector("#weather span:last-child");
 function onGeoOk(position){
   const lat = position.coords.latitude;
   const lon=position.coords.longitude;
-  console.log(lat, lon);
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
-  fetch(url);
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
   //fetch : js call the url. 
   //fetch is actually a promise(시간이 좀 걸린 뒤에 일어남.) 서버의 응답을 기다려야됨
   fetch(url).then(response => response.json() ).then(data=>{
-    const weatherContainer = document.querySelector("#weather span:first-child");
-    
-    const city = document.querySelector("#weather span:last-child");
     const name = data.name;
-    const weather = data.weather[0].main;
-    weather.innerText=weather;
+    weather.innerText=`${data.weather[0].main}/${data.main.temp}`;
     city.innerText=data.name;
   });
-  // url을 fetcg하고 그다음 response받음
+  // url을 fetch하고 그다음 response받음
   
 }
 function onGeoError(){
@@ -33,3 +28,4 @@ navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 // API로 다른 서버와 데이터 교환
 
 // 백엔드 javascript -> wetube course
+
