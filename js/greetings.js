@@ -1,10 +1,10 @@
+localStorage.removeItem("username");
 const loginForm = document.querySelector("#login-form");
 //tag, class, id 다 찾으므로 id임을 알려주기 위해서는 #을 login-form 앞에 붙여서 사용
 //const loginForm2= document.getElementById("login-form");
 
 const loginInput = loginForm.querySelector("input");
 // const loginInput = document.querySelector("#login-form input");
-const link = document.querySelector("a");
 const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 
