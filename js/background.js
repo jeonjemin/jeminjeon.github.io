@@ -7,5 +7,4 @@ const bgImage = document.createElement("img");
 bgImage.src = `img/${aImage}`;
 
 document.body.appendChild(bgImage);
-
 //appendchild 맨 위에, prepand 맨끝에 추가. 

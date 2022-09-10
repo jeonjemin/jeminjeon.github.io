@@ -1,3 +1,9 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -5,4 +11,39 @@ html, body {
 
 .hidden {
   display:none;
+}
+
+#weather {
+  font-size: 20px;
+  color:blue;
+  font-weight: bold;
+  background: repeating-linear-gradient(90deg, rgb(231, 231, 182),rgb(152, 236, 152), 10px, rgb(236, 157, 157) 0,  rgb(236, 157, 157) 20px);
+}
+
+#todo-form{
+  font-size:medium;
+  background-size:auto;
+  background-color: pink;
+}
+#todo-list {
+  font-size : 18px;
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#greeting {
+  color: black;
+  background-color: aquamarine;
+}
+
+#quote {
+  color:violet;
+  background-color: rgb(86, 108, 209);
+}
+
+#clock {
+  background-color: pink;
+  color:blue;
+  font-size:38px;
+  font-weight: bold;
 }
